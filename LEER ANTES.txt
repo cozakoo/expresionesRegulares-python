@@ -1,0 +1,12 @@
+ANTES DE EJECUTAR
+
+1. Ejecutar "punto1.exe"
+2. esperar a que se habra el navegador
+3. apretar el boton de "Comenzar" o en la barra donde dice "Celebridades"
+4. Explorar las listas de celebridades
+
+
+DURANTE LA EJECUCION
+
+- Una vez apretado el boton "Comenzar o "Celebridades" en la consola aparecera la url que se baso para listar las celebridades
+- Si se apreta el boton "Siguiente" o "Anterior" en la consola aparecera la siguiente URL que se baso para obtener el listado de celebridades

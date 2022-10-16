@@ -1,0 +1,92 @@
+<!-- Extiende de Layout.html -->
+{% extends "layout.html" %}
+<div class="container p-4">
+    {% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-4">Lista de celebridades</h1>
+        <p class="lead">Por orden de popularidad</p>
+        <hr class="my-4">
+        <p>Celebridades y peliculas.</p>
+        <div class="row">
+            <div class=="col-md-12">
+                <h1>
+                    <center>Celebridades y peliculas</center>
+                </h1>
+                <!-- Creamos nuestra tabla de celebridades -->
+                <table border="5" cellpadding="10" cellspacing="0">
+                    <!-- Cracion de columnas -->
+                    <tr>
+                        <td>
+                            <strong>
+                                <center>#</center>
+                            </strong>
+                        </td>
+
+                        <!-- <div class="vertical-line" /> -->
+                        <td>
+                            <strong>
+                                <center>Persona</center>
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                <center>Profesion</center>
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                <center>Pelicula</center>
+                            </strong>
+                        </td>
+                    </tr>
+                    <!-- Creacion de filas -->
+                    <tbody>
+                        {%for leng in celebridades %}
+                        <tr>
+                            <td>
+                                <!-- numero de popularidad -->
+                                <center>{{leng[0]}}</center>
+                            </td>
+                            <td>
+                                <!-- nombre de la persona -->
+                                <center>{{leng[1]}}</center>
+                            </td>
+                            <td>
+                                <!-- profesion -->
+                                <center>{{leng[2]}}</center>
+                            </td>
+                            <td>
+                                <!-- pelicula -->
+                                <center>{{leng[3]}}</center>
+                            </td>
+                        </tr>
+                        {% endfor%}
+                    </tbody>
+                </table>
+
+                <div class="container p-4">
+                    <ul class="pager">
+                        <a href="/litacelebridadesAnt">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                autocomplete="off">Anterior</button>
+                        </a>
+
+                        <a href="/">
+                            <button type="button" class="btn btn-primary active" data-bs-toggle="button"
+                                autocomplete="off" aria-pressed="true">Home</button>
+                        </a>
+
+                        <a href="/litacelebridadesSig">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                autocomplete="off">Siguiente</button>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
